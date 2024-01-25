@@ -1,7 +1,7 @@
-from flask import flask
+from flask import Flask, render_template
 
-app = flask(__name__)
+app = Flask(__name__)
 
 @app.route('/')
 def hellow_world():
-    return 'hellow world'
+    return render_template('index.html')
